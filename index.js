@@ -10,7 +10,7 @@ export default function Home() {
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post("http://127.0.0.1:5000/login", { email, password });
+      const res = await axios.post("https://mini-ecommerce-cd3l.onrender.com/login", { email, password });
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user_id", email);
       setMessage("Login successful!");

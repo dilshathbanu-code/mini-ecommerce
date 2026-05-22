@@ -7,12 +7,12 @@ export default function Products() {
   const router = useRouter();
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:5000/products").then(res => setProducts(res.data));
+    axios.get("https://mini-ecommerce-cd3l.onrender.com/register/products").then(res => setProducts(res.data));
   }, []);
 
   const addToCart = async (product_id) => {
     const user_id = localStorage.getItem("user_id");
-    await axios.post("http://127.0.0.1:5000/cart/add", { user_id, product_id, quantity: 1 });
+    await axios.post("https://mini-ecommerce-cd3l.onrender.com/register/cart/add", { user_id, product_id, quantity: 1 });
     alert("Added to cart!");
   };
 

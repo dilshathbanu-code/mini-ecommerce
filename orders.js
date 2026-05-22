@@ -8,7 +8,7 @@ export default function Orders() {
 
   useEffect(() => {
     const user_id = localStorage.getItem("user_id");
-    axios.get(`http://127.0.0.1:5000/orders/${user_id}`).then(res => setOrders(res.data));
+    axios.get(`https://mini-ecommerce-cd3l.onrender.com/register/orders/${user_id}`).then(res => setOrders(res.data));
   }, []);
 
   return (

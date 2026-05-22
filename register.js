@@ -11,7 +11,7 @@ export default function Register() {
 
   const handleRegister = async () => {
     try {
-      await axios.post("http://127.0.0.1:5000/register", { name, email, password });
+      await axios.post("https://mini-ecommerce-cd3l.onrender.com/register", { name, email, password });
       setMessage("Registered successfully! Please login.");
       setTimeout(() => router.push("/"), 2000);
     } catch (err) {

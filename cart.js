@@ -20,7 +20,7 @@ export default function Cart() {
 
   const removeItem = async (product_id) => {
     const user_id = localStorage.getItem("user_id");
-    await axios.delete("http://127.0.0.1:5000/cart/remove", { data: { user_id, product_id } });
+    await axios.delete("https://mini-ecommerce-cd3l.onrender.com/register/cart/remove", { data: { user_id, product_id } });
     setCartItems(cartItems.filter(item => item.product_id !== product_id));
   };
 
